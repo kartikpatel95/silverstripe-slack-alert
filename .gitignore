@@ -1,0 +1,5 @@
+.idea
+.idea/
+/ss.error.log
+composer.lock
+/vendor
