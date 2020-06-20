@@ -10,6 +10,9 @@
 	}
   ],
   "require": {
+      "silverstripe/vendor-plugin": "^1.0",
+      "silverstripe/framework": "^4.0",
+      "silverstripe/siteconfig": "^4.4",
       "tractorcow/silverstripe-colorpicker": "^4.0"
   },
   "autoload": {
