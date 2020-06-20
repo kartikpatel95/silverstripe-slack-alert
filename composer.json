@@ -18,6 +18,7 @@
     }
   },
   "extra": {
+    "resources-dir": "_resources",
     "expose": [
       "src/assets"
     ]
