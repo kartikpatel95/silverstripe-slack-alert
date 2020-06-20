@@ -3,4 +3,4 @@ name: alertextension
 ---
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - Emergency\Extensions\SiteConfig_Extension
+    - Alert\Extensions\SiteConfig_Extension
