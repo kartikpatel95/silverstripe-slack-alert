@@ -1,5 +1,5 @@
 {
-  "name": "kartikpatel95/silverstripe-alert",
+  "name": "kartikpatel95/silverstripe-slack-alert",
   "description": "sticky alert",
   "type": "silverstripe-vendormodule",
   "license": "BSD-3-Clause",
