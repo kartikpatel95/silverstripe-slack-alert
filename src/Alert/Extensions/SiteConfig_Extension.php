@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Emergency\Extensions;
+namespace Alert\Extensions;
 
 use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Forms\FieldList;
@@ -25,7 +25,7 @@ class SiteConfig_Extension extends DataExtension
     public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldToTab(
-            'Root.Main',
+            'Root.SlackAlert',
             FieldGroup::create([
                 ColorField::create('AlertColor', 'Color'),
                 HTMLEditorField::create('AlertMessage', 'Alert Message')
@@ -36,7 +36,7 @@ class SiteConfig_Extension extends DataExtension
     public function getAlert()
     {
         return SSViewer::execute_template(
-            'App\\Emergency\\Alert',
+            'Alert\\Alert',
             ArrayData::create([
                 'Message' => $this->owner->AlertMessage,
                 'Color' => $this->owner->AlertColor

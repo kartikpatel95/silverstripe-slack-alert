@@ -1,4 +1,4 @@
-<% require themedCSS('assets/css/alert') %>
+<%--<% require themedCSS('assets/css/alert') %>--%>
 
 <% with $SiteConfig %>
     <div class="emergency-alert" style="background-color: #$AlertColor">
