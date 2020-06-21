@@ -7,6 +7,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\View\ArrayData;
+use SilverStripe\View\Requirements;
 use SilverStripe\View\SSViewer;
 use TractorCow\Colorpicker\Color;
 use TractorCow\Colorpicker\Forms\ColorField;
@@ -17,11 +18,18 @@ use TractorCow\Colorpicker\Forms\ColorField;
  */
 class SiteConfig_Extension extends DataExtension
 {
+
+    /**
+     * @var string[]
+     */
     private static $db = [
         'AlertMessage' => 'HTMLText',
         'AlertColor' => Color::class
     ];
 
+    /**
+     * @param FieldList $fields
+     */
     public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldToTab(
@@ -35,6 +43,9 @@ class SiteConfig_Extension extends DataExtension
 
     public function getAlert()
     {
+        Requirements::css('kartikpatel95/silverstripe-slack-alert:client/dist/alert.css');
+        Requirements::javascript('https://code.jquery.com/jquery-3.5.1.min.js');
+        Requirements::javascript('kartikpatel95/silverstripe-slack-alert:client/dist/alert.js');
         return SSViewer::execute_template(
             'Alert\\Alert',
             ArrayData::create([

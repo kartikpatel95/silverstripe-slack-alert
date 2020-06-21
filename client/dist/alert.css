@@ -1,0 +1,10 @@
+.emergency-alert .alert-close {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.emergency-alert .alert-close:hover {
+  cursor: pointer;
+}
+
