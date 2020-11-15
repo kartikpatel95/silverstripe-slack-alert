@@ -2,6 +2,9 @@
   text-align: right;
   font-size: 18px;
   font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .emergency-alert .alert-close:hover {

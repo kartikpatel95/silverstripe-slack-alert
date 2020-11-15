@@ -5,3 +5,4 @@ composer.lock
 /vendor
 _resources
 node_modules
+.env

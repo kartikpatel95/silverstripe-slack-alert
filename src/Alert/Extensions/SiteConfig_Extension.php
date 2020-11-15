@@ -36,8 +36,8 @@ class SiteConfig_Extension extends DataExtension
         $fields->addFieldToTab(
             'Root.SlackAlert',
             FieldGroup::create([
-                ColorField::create('AlertColor', 'Color'),
-                HTMLEditorField::create('AlertMessage', 'Alert Message')
+                ColorField::create('AlertColor', 'Color')->addExtraClass('w-100'),
+                HTMLEditorField::create('AlertMessage', 'Alert Message')->addExtraClass('w-100')
             ])->setTitle('Alert Section')
         );
     }
