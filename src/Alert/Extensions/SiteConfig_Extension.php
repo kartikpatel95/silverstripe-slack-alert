@@ -14,6 +14,7 @@ use TractorCow\Colorpicker\Forms\ColorField;
 
 /**
  * Class SiteConfig_Extension
+ *
  * @package App\Emergency\Extensions
  */
 class SiteConfig_Extension extends DataExtension
@@ -41,11 +42,15 @@ class SiteConfig_Extension extends DataExtension
         );
     }
 
+    /**
+     * @return string
+     */
     public function getAlert()
     {
         Requirements::css('kartikpatel95/silverstripe-slack-alert:client/dist/alert.css');
         Requirements::javascript('https://code.jquery.com/jquery-3.5.1.min.js');
         Requirements::javascript('kartikpatel95/silverstripe-slack-alert:client/dist/alert.js');
+
         return SSViewer::execute_template(
             'Alert\\Alert',
             ArrayData::create([
