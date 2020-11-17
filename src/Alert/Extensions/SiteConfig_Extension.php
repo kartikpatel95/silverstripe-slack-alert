@@ -6,10 +6,10 @@ use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\ORM\FieldType\DBVarchar;
 use SilverStripe\View\ArrayData;
 use SilverStripe\View\Requirements;
 use SilverStripe\View\SSViewer;
-use TractorCow\Colorpicker\Color;
 use TractorCow\Colorpicker\Forms\ColorField;
 
 /**
@@ -25,7 +25,7 @@ class SiteConfig_Extension extends DataExtension
      */
     private static $db = [
         'AlertMessage' => 'HTMLText',
-        'AlertColor' => Color::class
+        'AlertColor' => DBVarchar::class . '(7)'
     ];
 
     /**
